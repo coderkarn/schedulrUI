@@ -1,0 +1,25 @@
+<div class="container">
+  <main>
+    <h2>Set Reminder</h2>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="reminderTitle" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Reminder Time</mat-label>
+      <input
+        matInput
+        [(ngModel)]="reminderTime"
+        placeholder="e.g. Apr 22, 9:00 AM"
+      />
+    </mat-form-field>
+
+    <mat-checkbox [(ngModel)]="repeat">Repeat Daily</mat-checkbox>
+
+    <button mat-raised-button color="accent" (click)="saveReminder()">
+      Save
+    </button>
+  </main>
+</div>

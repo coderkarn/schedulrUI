@@ -1,0 +1,30 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 24px;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  color: blue;
+  font-weight: bold;
+  margin-left: 4px;
+  margin-right: 80px;
+}
+
+.page-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logout {
+  font-weight: bold;
+   font-size: 1.5rem;
+   color: red;
+}

@@ -1,0 +1,64 @@
+.dashboard-container {
+  padding: 24px;
+  text-align: center;
+  background-color: #f9fafc;
+  min-height: 100vh;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+}
+/* --------------------------------------- */
+.container {
+  height: 100vh;
+}
+
+.logo {
+  font-weight: bold;
+  color: #2962ff;
+  margin: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+mat-sidenav-content {
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.calendar-section {
+  max-width: 300px;
+}
+
+.reminders {
+  margin-top: 2rem;
+}
+

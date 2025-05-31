@@ -1,0 +1,33 @@
+<div class="container">
+  <header>
+    <span>Create Event</span>
+    <button mat-button>Logout</button>
+  </header>
+  <main>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="eventDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Start Time</mat-label>
+      <input matInput [(ngModel)]="startTime" placeholder="e.g. 9:00 AM" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="saveEvent()">
+      Save Event
+    </button>
+  </main>
+</div>

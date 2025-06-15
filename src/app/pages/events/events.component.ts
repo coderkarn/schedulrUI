@@ -1,28 +1,10 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-events',
-  imports: [
-    CommonModule,
-    MatDatepickerModule,
-    FormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSidenavModule
-  ],
+  standalone: false,
   templateUrl: './events.component.html',
-  styleUrl: './events.component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrls: ['./events.component.css'],
 })
 export class EventsComponent {
   title = '';

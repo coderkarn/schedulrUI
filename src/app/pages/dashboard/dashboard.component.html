@@ -1,19 +1,20 @@
-
 <div class="dashboard-container">
+  <div class="dashboard-header">
+    Welcome, User
+  </div>
+  <div class="dashboard-content">
+    <div class="dashboard-card">
+      <mat-card>
+        <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+      </mat-card>
+    </div>
+    
+    <div class="dashboard-card">
+      <h2>Recent Activities</h2>
+      <p>You have no recent activities.</p>
+    </div>
 
-  <div class="dashboard-cards">
-    <mat-card class="dashboard-card" routerLink="/events">
-      <mat-card-title>Events</mat-card-title>
-      <mat-card-content>
-       
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="dashboard-card" routerLink="/reminders">
-      <mat-card-title>Reminders</mat-card-title>
-      <mat-card-content>
-        Set and track reminders easily.
-      </mat-card-content>
-    </mat-card>
+    <!-- calender here -->
+    <!-- Upcoming Reminder -->
   </div>
 </div>

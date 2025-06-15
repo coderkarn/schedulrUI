@@ -1,32 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [
-    CommonModule,
-    MatDatepickerModule,
-    FormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSidenavModule
-  ],
+  standalone: false,
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DashboardComponent {
 
   selectedDate: Date = new Date();
+  constructor() {
+    console.log('Dashboard component initialized');
+    // You can initialize any properties or services here if needed
+  }
+
 
   reminders = [
     { title: 'Time to deep', time: '19:45PM' },

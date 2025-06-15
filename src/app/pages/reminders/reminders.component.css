@@ -1,8 +1,31 @@
-.full-width {
-  width: 100%;
-  margin-bottom: 1rem;
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-main {
-  padding: 2rem;
+.form-header {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.checkbox {
+  margin: 16px 0;
+  display: block;
+}
+
+.submit-button {
+  display: block;
+  margin: 24px auto 0;
+  padding: 10px 24px;
 }

@@ -1,64 +1,41 @@
 .dashboard-container {
   padding: 24px;
-  text-align: center;
   background-color: #f9fafc;
   min-height: 100vh;
+  display: flex;
+  margin-left: 10px;
+  flex-direction: column;/* Adjust if your sidebar width is different */
 }
 
-.dashboard-cards {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 40px;
-  flex-wrap: wrap;
+.dashboard-header {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
 }
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
 
 .dashboard-card {
-  width: 250px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.dashboard-card:hover {
-  transform: scale(1.05);
-}
-/* --------------------------------------- */
-.container {
-  height: 100vh;
+mat-card {
+  width: 100%;
 }
 
-.logo {
-  font-weight: bold;
-  color: #2962ff;
-  margin: 1rem;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-mat-sidenav-content {
-  padding: 1rem;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-main {
-  padding: 2rem;
-}
-
-.calendar-section {
-  max-width: 300px;
-}
-
-.reminders {
-  margin-top: 2rem;
+mat-calendar {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: none;
 }
 

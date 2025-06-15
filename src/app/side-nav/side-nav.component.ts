@@ -5,13 +5,13 @@ import { MatTooltip } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-side-nav',
-  imports: [MatList,MatListItem,MatIcon,MatTooltip],
+  standalone: false,
   templateUrl: './side-nav.component.html',
-  styleUrl: './side-nav.component.css'
+  styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent {
 
-  constructor() { 
+  constructor() {
     // You can initialize any properties or services here if needed
   }
 

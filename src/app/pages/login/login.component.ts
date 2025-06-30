@@ -13,7 +13,9 @@ export class LoginComponent {
   email = '';
   password = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.reset();
+   }
 
   login(): void {
     if (this.email && this.password) {
@@ -26,7 +28,7 @@ export class LoginComponent {
       console.log('User Details:', userDetails, JSON.stringify(userDetails));
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('userDetails', JSON.stringify(userDetails));
-      this.reset();
+      
       // Redirect to dashboard or show error
       this.router.navigate(['/dashboard']);
     } else {
@@ -35,6 +37,7 @@ export class LoginComponent {
   }
 
   reset(): void {
+    console.log("reseting");
     this.email = '';
     this.password = ''; 
   }

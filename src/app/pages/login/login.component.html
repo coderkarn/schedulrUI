@@ -1,38 +1,44 @@
 <div class="login-container">
   <mat-card class="login-card">
-    <h2 class="login-title">Login</h2>
+    <h2 class="login-title">{{ mode === 'login' ? 'Login' : 'Sign Up' }}</h2>
 
     <form>
+      <ng-container *ngIf="mode === 'signup'">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput [(ngModel)]="fullName" name="fullName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="userName" name="userName" required />
+        </mat-form-field>
+      </ng-container>
+
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
-        <input
-          matInput
-          type="email"
-          [(ngModel)]="email"
-          name="email"
-          required
-        />
+        <input matInput type="email" [(ngModel)]="email" name="email" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Password</mat-label>
-        <input
-          matInput
-          type="password"
-          [(ngModel)]="password"
-          name="password"
-          required
-        />
+        <input matInput type="password" [(ngModel)]="password" name="password" required />
       </mat-form-field>
 
       <button
         mat-raised-button
         color="primary"
         class="login-button"
-        (click)="login()"
+        (click)="mode === 'login' ? login() : signup()"
       >
-        Login
+        {{ mode === 'login' ? 'Login' : 'Create Account' }}
       </button>
     </form>
+
+    <div class="switch-mode">
+      <a href="#" (click)="switchMode(); $event.preventDefault()">
+        {{ mode === 'login' ? "Don't have an account? Sign Up" : "Already have an account? Login" }}
+      </a>
+    </div>
   </mat-card>
 </div>

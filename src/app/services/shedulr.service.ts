@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { 
   POST_AUTH_LOGIN, POST_EVENT_CREATE, GET_EVENT_BY_USERID, 
-  POST_REMINDER_CREATE, GET_REMINDER_BY_USERID 
+  POST_REMINDER_CREATE, GET_REMINDER_BY_USERID, 
+  POST_AUTH_SIGNUP
 } from '../../common/app-constants';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environments';
@@ -25,6 +26,9 @@ export class SchedulrService {
   // ✅ Login
   login(request: any): Observable<any> {
     return this.http.post(`${this.baseUrl}${POST_AUTH_LOGIN}`, request);
+  }
+  createUser(request: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}${POST_AUTH_SIGNUP}`, request);
   }
 
   // ✅ Create event

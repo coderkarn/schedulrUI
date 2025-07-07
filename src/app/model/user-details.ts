@@ -1,5 +1,6 @@
 export class UserDetails {
   userId: number =0;
+  fullName: string = '';
   userName: string = '';
   password: string = '';
   emailId: string = '';

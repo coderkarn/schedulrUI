@@ -4,6 +4,7 @@ export const API_REMINDER = '/reminder';
 
 // Auth
 export const POST_AUTH_LOGIN = `${API_BASE}/login`;
+export const POST_AUTH_SIGNUP = `${API_BASE}/create`;
 
 // Events
 export const POST_EVENT_CREATE = `${API_EVENT}/create`;

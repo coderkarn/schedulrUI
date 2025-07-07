@@ -13,6 +13,10 @@ import { SchedulrService } from '../../services/shedulr.service';
 export class LoginComponent {
   email = '';
   password = '';
+  userName = '';
+  fullName = '';
+
+  mode: 'login' | 'signup' = 'login';
 
   constructor(private router: Router,
     private schedulrService: SchedulrService
@@ -52,11 +56,41 @@ export class LoginComponent {
       alert('Please enter both email and password.');
     }
   }
+  signup(): void {
+    if (this.fullName && this.userName && this.email && this.password) {
+      let userDetails = new UserDetails();
+      userDetails.fullName = this.fullName;
+      userDetails.userName = this.userName;
+      userDetails.emailId = this.email;
+      userDetails.password = this.password;
+
+      this.schedulrService.createUser(userDetails).subscribe({
+        next: (response) : any => {
+          console.log('Signup successful:', response);
+          alert('Account created! You can now log in.');
+          this.mode = 'login';
+          this.reset();
+        },
+        error: error => {
+          console.error('Signup failed:', error);
+          alert(error.error?.message || 'Signup failed. Please try again.');
+        }
+      });
+    } else {
+      alert('Please fill in all fields.');
+    }
+  }
+
+  switchMode(): void {
+    this.mode = this.mode === 'login' ? 'signup' : 'login';
+    this.reset();
+  }
 
   reset(): void {
-    console.log("reseting");
     this.email = '';
     this.password = '';
+    this.fullName = '';
+    this.userName = '';
   }
 }
 

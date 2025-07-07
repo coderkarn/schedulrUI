@@ -1,4 +1,4 @@
-package com.example.schedulr.model;
+package com.example.schedulr.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

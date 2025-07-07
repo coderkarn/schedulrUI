@@ -34,6 +34,8 @@ public class UserDetails {
     @Column(name = "created_ts")
     private LocalDateTime createdTs;
 
+    //lastlogin
+
     @Column(name = "modified_ts")
     private LocalDateTime modifiedTs;
 }

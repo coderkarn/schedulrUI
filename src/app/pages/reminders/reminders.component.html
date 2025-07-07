@@ -7,14 +7,10 @@
       <input matInput [(ngModel)]="reminderTitle" />
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Reminder Time</mat-label>
-      <input
-        matInput
-        [(ngModel)]="reminderTime"
-        placeholder="e.g. Apr 22, 9:00 AM"
-      />
-    </mat-form-field>
+<mat-form-field appearance="outline" class="full-width">
+  <mat-label>Reminder Date & Time</mat-label>
+  <input matInput type="datetime-local" [(ngModel)]="reminderTime" />
+</mat-form-field>
 
     <mat-checkbox [(ngModel)]="repeat" class="checkbox">
       Repeat Daily

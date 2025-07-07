@@ -30,6 +30,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RemindersComponent } from './pages/reminders/reminders.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
     MatTooltipModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    HttpClientModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: "/Schedulr/" }],
   bootstrap: [AppComponent],

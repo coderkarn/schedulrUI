@@ -20,6 +20,8 @@ export class TopHeaderComponent {
   logout() {
     // Logic to handle logout
     console.log('User logged out');
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userDetails');
     this.router.navigate(['/login']);
     // Redirect to login page or perform other actions as needed
   }

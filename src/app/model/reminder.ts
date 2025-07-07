@@ -5,7 +5,7 @@ export class Reminder {
   reminderTime: string = ''; // ISO string
   eventId: number = 0;
   userEmail: string = '';
-  isActive: boolean = false;
+  active: boolean = false;
   createdTs?: string;
   lastUpdatedTs?: string;
 }
